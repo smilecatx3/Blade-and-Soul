@@ -8,11 +8,10 @@ namespace BladeAndSoul.EventTimeCalculator
         {
             DateTime[] results = new DateTime[length];
 
-            DateTime previous = start;
-            for (int i=0; i<length; i++)
+            results[0] = start.AddMinutes(60);
+            for (int i = 1; i < length; i++)
             {
-                results[i] = previous.AddMinutes(73);
-                previous = results[i];
+                results[i] = results[i-1].AddMinutes(73);
             }
 
             return results;

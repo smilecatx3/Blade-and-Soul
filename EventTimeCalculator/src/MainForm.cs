@@ -22,7 +22,7 @@ namespace BladeAndSoul.EventTimeCalculator
             items.Clear();
             foreach(var time in nextEventTimes)
             {
-                items.Add(time.ToString());
+                items.Add(time.ToString() + " 出字");
             }
         }
     }
